@@ -1,0 +1,278 @@
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+.app {
+    width: 375px;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    margin: 100px auto;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+}
+
+.app img {
+    width: 375px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-bottom: 15px;
+    height: 250px;
+}
+
+p {
+    font-size: 15px;
+    padding-left: 25px;
+    color: hsl(217, 19%, 35%);
+    padding-right: 60px;
+}
+
+body {
+    font-family: 'Manrope';
+    background-color: hsl(210, 46%, 95%);
+}
+
+.text {
+    font-weight: 700;
+    font-size: 20px;
+    padding: 0 25px;
+    margin-top: 20px;
+    color: hsl(217, 19%, 35%);
+}
+
+.name {
+    display: flex;
+    align-items: center;
+    position: relative;
+    color: hsl(217, 19%, 35%);
+    transition: background-color 0.3s;
+    width: 375px;
+}
+
+.name img {
+    border-radius: 20px;
+    height: 40px;
+    width: 40px;
+    margin-top: 30px;
+    margin-left: 25px;
+    transition: opacity 0.3s;
+}
+
+.fname {
+    margin-left: 20px;
+    margin-top: -10px;
+    font-weight: 700;
+    font-size: 15px;
+    transition: opacity 0.3s;
+}
+
+.date {
+    color: hsl(217, 19%, 35%);
+    font-weight: 300;
+    font-size: 14px;
+    display: block;
+    transition: opacity 0.3s;
+    margin-top: 20px;
+    margin-left: -130px;
+}
+
+button {
+    display: inline-flex;
+    height: 40px;
+    background-color: hsl(210, 46%, 95%);
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    width: 40px;
+    margin-top: 15px;
+    z-index: 2; 
+    margin-left: 130px;
+}
+
+.btn img {
+    width: 20px;
+    height: 20px;
+    margin: auto;
+}
+
+.name:hover .avatar,
+.name:hover .fname,
+.name:hover .date {
+    display: none;
+}
+
+.name:hover .hover-content {
+    display: flex;
+}
+
+.hover-content {
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    width: 355px;
+    background-color: hsl(217, 19%, 35%);
+    padding: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    justify-content: center;
+    z-index: 1; 
+}
+
+.share-text {
+    color: hsl(210, 46%, 95%);
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 5px;
+    margin-right: 20px;
+}
+
+.hover-images {
+    display: flex;
+    flex-grow: 1;
+}
+
+.hover-images img {
+    width: 25px;
+    height: 25px;
+    margin: 0 15px;
+    border-radius: 0;
+}
+
+.name:hover .btn {
+    position: absolute; 
+    top: -10px; 
+    right: 0px; 
+    background-color: hsl(214, 17%, 51%);
+    z-index: 3; 
+    margin-right: 30px;
+    height: 35px;
+    width: 35px;
+}
+
+.name:hover .btn img {
+    filter: brightness(0) invert(1);
+}
+@media(min-width:1440px){
+    .app{
+    width: 800px; 
+    display: flex;
+    height: 400px; 
+    margin-top: 200px;  
+    position: relative;    
+    }
+    .app img{
+    height: 400px;
+    margin-top: 15px;
+    width: 400px;
+     border-top-right-radius: 0;
+     border-bottom-left-radius: 10px;
+     position: relative;
+
+    }
+    .name img{
+        width: 50px;
+        height: 50px;
+        border-radius: 20px;
+    }
+    .text{
+        
+        margin-top: -200px;
+        margin-left: 200px;
+        position: absolute;
+        padding-left:50px;
+        width: 350px;
+    }
+    p{
+        padding-left:380px;
+        width: 450px;
+        position: absolute;
+    }
+    .name{
+        margin-top: 250px;
+        margin-right: 500px;
+        position: relative; 
+        right: -20px;
+    }
+    .btn img{
+        height: auto; 
+        margin: auto;
+        
+    }
+    .btn{
+        margin-left: 430px;
+        position:absolute;
+        
+    }
+    .fname {
+        width: auto; 
+        display: flex;
+        position: absolute;
+        width: 250px;
+        margin-left: 90px;
+        margin-top: -15px;
+    }
+    .avatar{
+        margin-right: 60px;
+    }
+    .date{
+        display: flex;
+        position:absolute;
+        width: 250px;
+        margin-left: 90px;
+        margin-top: 10px;
+    }
+    .name:hover .avatar,
+.name:hover .fname,
+.name:hover .date {
+    display: block;
+}
+.name:hover .btn{
+    position:relative;
+}
+.hover-content::after {
+    content: '';
+    position: relative;
+    left: 0%;
+    
+    bottom: -36px; 
+    transform: translateX(-50%);
+    border-width: 10px;
+    border-style: solid;
+    border-color: hsl(217, 19%, 35%) transparent transparent transparent; 
+    width: 0;
+    height: 0;
+}
+
+.name:hover .hover-content {
+    display: flex;
+    margin-left: 300px;
+    margin-top: -130px;
+    width: 300px;
+    border-radius: 10px;
+    padding: 10px;
+    position: absolute; 
+}
+.name:hover .hover-images img{
+    border-radius: 0;
+    height: auto;
+    width: auto;
+    padding: auto;
+}
+.name:hover{
+ position: relative;
+}
+ .name:hover .app img{
+   position:relative;
+   
+
+}
+
+}
